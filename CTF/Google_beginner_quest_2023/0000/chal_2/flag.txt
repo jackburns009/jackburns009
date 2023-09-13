@@ -1,0 +1,13 @@
+FLAG{NOW_IVE_LEARNED_MY_ABCS}
+
+The note that goes with this challenge: "We use our alphabet too frequently, let's try an alternative one"
+This note hints that the cipher given to us is going to be a similar substitution cipher to the previous challenges. After doing some research into substitution ciphers I found this website: https://planetcalc.com/8047/ which has a substitution cipher cracker. Just as the text of the decoded cpher explains, the site uses frequency analysis and other methods to determing what the key is likely to be until it finds sentances in English. The decrypted cipher and the flag was output from the calculator and is shown below.
+
+THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+THIS TEXT IS A PANGRAM, WHICH MEANS THAT IT CONTAINS ALL 26 LETTERS OF THE ENGLISH ALPHABET. THIS MAKES IT IDEAL FOR FREQUENCY ANALYSIS, AS THE CRYPTANALYST CAN COMPARE THE FREQUENCY OF LETTERS IN THE CIPHERTEXT TO THE KNOWN FREQUENCY OF LETTERS IN THE ENGLISH LANGUAGE.
+
+FOR EXAMPLE, THE MOST COMMON LETTER IN THE ENGLISH LANGUAGE IS E. IF THE MOST COMMON LETTER IN THE CIPHERTEXT IS X, THEN THE CRYPTANALYST CAN ASSUME THAT X IS LIKELY TO BE A SUBSTITUTION FOR E.
+
+OTHER COMMON LETTERS IN THE ENGLISH LANGUAGE INCLUDE T, A, O, I, N, S, AND H. THE CRYPTANALYST CAN USE THIS INFORMATION TO MAKE EDUCATED GUESSES ABOUT THE OTHER SUBSTITUTIONS IN THE CIPHERTEXT.
+
+FLAG{NOW_IVE_LEARNED_MY_ABCS}

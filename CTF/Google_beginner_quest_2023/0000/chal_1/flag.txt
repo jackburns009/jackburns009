@@ -1,0 +1,6 @@
+FLAG{get_viggy_with_it}
+
+The description for challenge 1 says: "This one is not exactly caesar but it might be the key". Given this discritption and the format of the text we find that this is another encoded cipher and that the cipher requires a key, where that key is "caesar". A quick google search will show that a vigenere cipher is a common cipher that uses a key. Using an online decoder such as https://www.dcode.fr/vigenere-cipher we can decode the message and thus the flag.
+
+
+The Vigenere cipher is a polyalphabetic substitution cipher. It is a more sophisticated version of the Caesar cipher, which uses a single shift value to encrypt the entire message. FLAG{get_viggy_with_it}

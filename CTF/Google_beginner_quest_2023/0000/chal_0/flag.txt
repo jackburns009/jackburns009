@@ -1,0 +1,5 @@
+FLAG{rotate_that_alphabet}
+
+The description of this challenge said: "Let's test your knowledge on caesars methods. From this description it can be implied that the text given to us(coppied into in chal0.txt) is encoded using a caesar cipher. By going to an online decoder like https://www.dcode.fr/caesar-cipher we can brute force the solution very easily to retrieve the text below which contains the flag.
+
+Anyway, Caesar was a skilled communicator, and he used a variety of methods to keep his messages secret from his enemies. One of these methods was the Caesar cipher, a simple technique to obfuscate communications. FLAG{rotate_that_alphabet}
