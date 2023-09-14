@@ -1,0 +1,19 @@
+flag{SOLDIERWEHAVEINTERCEPTEDTHEENE}
+
+We start by examining the cipher text. Given that it has the same strange "â¸º" characters as the last cipher and that the hint references a confederate general we can assume that the cipher is another American style morse code cipher. After replacing the weird characters with the American morse code for L and decrypting the message using a translator such as the one found here: https://morsecode.world/american/translator.html we can see the following decoded message:
+
+RETRIEVE USE A CODE WE GENERALS TRUE REST VERSION IT HAVE AMERICAN FLAG OF OF APPEARS INTERCEPTED TELEGRAPH SOLDIER ENEMY BE CIPHER TO BACON THE TO PEMBERTON MESSAGE {EOYFPIJPIYBGYNSVSDRPTMIYBJXSEC} ALLIES
+
+We then see that the flag is still encrypted and is not in plaintext for us to view. Looking at the contents of the message we see that this is a "PEMBERTON MESSAGE" and from the hint we know that Pemberton is a general that used the vigenere cipher. Now examining the rest of the message we can see that the first few words are telling us to find a code that the generals used. After doing some research we find that there were 3 very popular codes that the confederates used.
+Using the code "Manchester bluff we can decrypt the first have of the message to be:
+SOLDIERWEHAVEINJSQPIPUPUKIMYZX
+
+then using the code "complete victory" we get:
+CAMQEEQLNQZNKWUTERCEPTEDTHEENE
+
+putting the two decoded messages together we get the flag:
+SOLDIERWEHAVEINTERCEPTEDTHEENE
+
+We can assume that it is just cut off and that the real message is "soldier we hace intercepted the enemy"
+
+flag{SOLDIERWEHAVEINTERCEPTEDTHEENE}

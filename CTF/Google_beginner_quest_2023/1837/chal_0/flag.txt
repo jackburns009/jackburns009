@@ -11,6 +11,6 @@ and we can plug it into an american style decoder to get this message:
 after seeing the pattern that every word alternates between international and american style, we can piece the whole message to get the flag:
 FROM NEW YORK CITY USA TO LONDON UNITED KINGDOM REQUEST TO EXTRACT FLAG TR4N54T4NTIC ON ORDER OF SENDER GOOGLE CTF
 
-after looking at the message we can determine that the â¸º was likely supposed to be an L to spell out transatlantic. Thus our flag is:
+after looking at the message we can determine that the â¸º was likely supposed to be an L to spell out transatlantic. You will notice that all other instances of L in the plaintext were encrypted using the international morse code. Thus our flag is:
 
 FLAG{TR4N54TL4NTIC}
