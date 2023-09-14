@@ -1,0 +1,16 @@
+FLAG{TR4N54TL4NTIC}
+
+The background on this set of challenges is all about morse code. This indicates that the challenges themselves will deal with morse code. When we open the this challenge we can immidately see that this is the case. The hint at the bottom of the challenge saus: "Some of these letters don't mean anything in the morse code we use here in Europe. COuld they be some American style encoding? 
+After finding out that there is not only international but also American style encoding we can plug the ciphertext into morse decoders. First we remove the characters "{", "}" , and "â¸º" as these are not valid characters.
+plugging the cipher into an international morse code decoder we get this message:
+FROM NEW YORK IEITII USA TEE LONDON UNITED KINGDOM EIEFUEST TO ELTEIAIET FLAG TEI4NO4T4NTIIE ON EEEIDEEI OF SENDEEI GOOGLE IETR
+
+and we can plug it into an american style decoder to get this message:
+# NEW # CITY # TO # UNITED # REQUEST # EXTRACT # TR4N54T4NTIC # ORDER # SENDER # CTF
+
+after seeing the pattern that every word alternates between international and american style, we can piece the whole message to get the flag:
+FROM NEW YORK CITY USA TO LONDON UNITED KINGDOM REQUEST TO EXTRACT FLAG TR4N54T4NTIC ON ORDER OF SENDER GOOGLE CTF
+
+after looking at the message we can determine that the â¸º was likely supposed to be an L to spell out transatlantic. Thus our flag is:
+
+FLAG{TR4N54TL4NTIC}
