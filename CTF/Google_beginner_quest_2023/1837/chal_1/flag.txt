@@ -1,4 +1,4 @@
-flag{SOLDIERWEHAVEINTERCEPTEDTHEENE}
+FLAG{MANCHESTERBLUFFCOMPLETEVICTORY}
 
 We start by examining the cipher text. Given that it has the same strange "â¸º" characters as the last cipher and that the hint references a confederate general we can assume that the cipher is another American style morse code cipher. After replacing the weird characters with the American morse code for L and decrypting the message using a translator such as the one found here: https://morsecode.world/american/translator.html we can see the following decoded message:
 
@@ -11,9 +11,11 @@ SOLDIERWEHAVEINJSQPIPUPUKIMYZX
 then using the code "complete victory" we get:
 CAMQEEQLNQZNKWUTERCEPTEDTHEENE
 
-putting the two decoded messages together we get the flag:
+putting the two decoded messages together we get the message:
 SOLDIERWEHAVEINTERCEPTEDTHEENE
 
 We can assume that it is just cut off and that the real message is "soldier we hace intercepted the enemy"
 
-flag{SOLDIERWEHAVEINTERCEPTEDTHEENE}
+When submitted this is not the correct flag however, the flag that they are looking for is the combination of the two keys used to get the message. 
+
+FLAG{MANCHESTERBLUFFCOMPLETEVICTORY}

@@ -1,0 +1,21 @@
+HTB{w3lc0m3_to0o0o_th3_c44andy_v4u1t!}
+
+We are given a docker instance of a website. Upon opening the website we are greeted with a login page prompting the user for an email and password to access the candy vault. After further inspection, inspecting the html source code, no flag is easily found and nothing on the network requests tab leads to easily finding the flag and there are no hidden directories like /flag or /robots.txt. Source code for the instance is provided so after reviewing the source code you can see how the post request for a login is made, and how a successful login is verified. 
+
+    user = users_collection.find_one({"email": email, "password": password})
+
+    if user:
+        return render_template("candy.html", flag=open("flag.txt").read())
+
+It is seen that the instance is a flask instance using a mongodb database storing the emails and passwords and it is using a simple "find_one" query to determine if the email and password exist in the database.
+Using NoSQL injection we can trick the flask application into returing the first email and passord stored. It is noted that the application is not filtering the request so sending a post request with the correct payload should be able to access the database without knowing an actual email, password pair. It is also noted that the server is url encoding the requests put into the server inputs, so it is important to send the post request from a seperate source(not through the servers input boxes) to not damage the payload with the url encoding.
+we can use a username and password of {"$ne": null}. The $ne operator in MongoDB means "not equal to." By providing a value of null, the query will return any document where the email and password fields are not equal to null, so essentially any user in the database.
+
+now that we know our payload we can send a curl post request from a terminal to the server.
+
+curl -X POST -H "Content-Type: application/json" -d '{"email": {"$ne": null}, "password": {"$ne": null}}' http://94.237.49.11:34642/login
+(the docker instance was located at 94.237.49.11:34642 for this challenge)
+
+the response when successful will return an html page that is the unlocked candy vault and after looking through the html response we can see the flag.
+
+HTB{w3lc0m3_to0o0o_th3_c44andy_v4u1t!}

@@ -1,0 +1,4 @@
+HTB{sp00ky_ph1sh1ng_w1th_sp00ky_spr34dsh33ts}
+
+the challenge starts by downloading the zip file called spooky phishing. Since there is Phishing in the file name you need to deactivate whatever security protocol will stop you from downloading the file, in my case it was windows defender. Once you have access to the zip file you can unzip it to reveal an html file that brings you to a website. When you open up the website and look at the url you see the flag in the url. The full url is https://windowsliveupdater.htb/HTB%7Bsp00ky_ph1sh1ng_w1th_sp00ky_spr34dsh33ts%7D/app.xlsx.exe
+but clearly HTB%7Bsp00ky_ph1sh1ng_w1th_sp00ky_spr34dsh33ts%7D is the flag where the %7B and %7D are the '{' and '}' characters respectively.
